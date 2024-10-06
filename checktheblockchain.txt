@@ -1,0 +1,34 @@
+Does the webpage 'really' use Blockchain and IPFS?  Check for yourself :)
+ 
+Using this link -> http://vitchain.com/amangle
+ 
+You can see the backend here:
+ 
+The Contract Address is 0x8BD52b6a630c28299C73046fa039F87c0b660314
+ 
+Go to -> https://vintage.myetherwallet.com
+                Switch to PIRL in the top right-hand corner for the network
+ 
+                Click on Contracts ->
+                                Enter the contract address -> 0x8BD52b6a630c28299C73046fa039F87c0b660314
+                                Enter the ABI/JSON Interface
+                                                [ { "constant": false, "inputs": [ { "name": "credAddress", "type": "address" }, { "name": "holderName", "type": "bytes" }, { "name": "vanityAddress", "type": "uint256" }, { "name": "avatar", "type": "bytes" } ], "name": "setVanityCredentialHolder", "outputs": [ { "name": "credentialHolderID", "type": "uint256" } ], "payable": false, "stateMutability": "nonpayable", "type": "function" }, { "constant": true, "inputs": [ { "name": "", "type": "uint256" } ], "name": "credentialHolders", "outputs": [ { "name": "credentialHolderAddress", "type": "address", "value": "0x0000000000000000000000000000000000000000" }, { "name": "ownerName", "type": "bytes", "value": "0x" }, { "name": "numCred", "type": "uint256", "value": "0" }, { "name": "avatar", "type": "bytes", "value": "0x" } ], "payable": false, "stateMutability": "view", "type": "function" }, { "constant": false, "inputs": [ { "name": "credAddress", "type": "address" }, { "name": "holderName", "type": "bytes" }, { "name": "avatar", "type": "bytes" } ], "name": "setCredentialHolder", "outputs": [ { "name": "credentialHolderID", "type": "uint256" } ], "payable": false, "stateMutability": "nonpayable", "type": "function" }, { "constant": true, "inputs": [ { "name": "credAddress", "type": "uint256" } ], "name": "getCredentialHolder", "outputs": [ { "name": "credentialHolderKey", "type": "address", "value": "0x0000000000000000000000000000000000000000" }, { "name": "owners", "type": "bytes", "value": "0x" }, { "name": "ownerscredtally", "type": "uint256", "value": "0" } ], "payable": false, "stateMutability": "view", "type": "function" }, { "constant": false, "inputs": [ { "name": "credAddress", "type": "uint256" }, { "name": "avatarBytes", "type": "bytes" } ], "name": "updateAvatar", "outputs": [], "payable": false, "stateMutability": "nonpayable", "type": "function" }, { "constant": true, "inputs": [ { "name": "credAddress", "type": "uint256" } ], "name": "numOfCredentials", "outputs": [ { "name": "ownerscredtally", "type": "uint256", "value": "0" } ], "payable": false, "stateMutability": "view", "type": "function" }, { "constant": false, "inputs": [ { "name": "credentialHolderID", "type": "uint256" }, { "name": "CredNum", "type": "uint256" }, { "name": "cNval", "type": "bytes" }, { "name": "cTval", "type": "uint8" }, { "name": "cDval", "type": "bytes" }, { "name": "eDate", "type": "uint256" }, { "name": "sDate", "type": "uint256" }, { "name": "cSval", "type": "bytes" } ], "name": "fixCredentialDetail", "outputs": [], "payable": false, "stateMutability": "nonpayable", "type": "function" }, { "constant": true, "inputs": [], "name": "owner", "outputs": [ { "name": "", "type": "address", "value": "0x205f070e781a530dde7575c6d6e76f6491cf05d7" } ], "payable": false, "stateMutability": "view", "type": "function" }, { "constant": false, "inputs": [ { "name": "_newOwner", "type": "address" } ], "name": "changeOwner", "outputs": [], "payable": false, "stateMutability": "nonpayable", "type": "function" }, { "constant": true, "inputs": [ { "name": "credentialHolderID", "type": "uint256" }, { "name": "credNum", "type": "uint256" } ], "name": "getCredentialDetail", "outputs": [ { "name": "cNval", "type": "bytes", "value": "0x" }, { "name": "cTval", "type": "uint8", "value": "0" }, { "name": "cDval", "type": "bytes", "value": "0x" }, { "name": "eDate", "type": "uint256", "value": "0" }, { "name": "sDate", "type": "uint256", "value": "0" }, { "name": "cSval", "type": "bytes", "value": "0x" } ], "payable": false, "stateMutability": "view", "type": "function" }, { "constant": false, "inputs": [ { "name": "credentialHolderID", "type": "uint256" }, { "name": "cNval", "type": "bytes" }, { "name": "cTval", "type": "uint8" }, { "name": "cDval", "type": "bytes" }, { "name": "eDate", "type": "uint256" }, { "name": "sDate", "type": "uint256" }, { "name": "cSval", "type": "bytes" } ], "name": "setCredentialDetail", "outputs": [], "payable": false, "stateMutability": "nonpayable", "type": "function" } ]
+ 
+                Read / Write Contract : 
+                	Select a function - getCredentialDetail
+                     CredentialHolderID  -  9784
+                     credNum -  1 (You can actually enter 0,1,2,3,4,5,6,7,8,9 or any single digit since I have 10 credentials
+                Click Read
+                     The content (one credential) should be visible in the boxes
+                           Please note that anything in bytes (starts with 0x) needs to be converted to ASCII
+                           Example:
+                              CredentialHolderID  -  9784
+                              credNum - 1
+                              cNval - 0x486f6e65792042656520436f6c6f6e7920526567697374726174696f6e
+                               If you put (0x486f6e65792042656520436f6c6f6e7920526567697374726174696f6e) into https://onlineasciitools.com/convert-bytes-to-ascii you will see 'Honey Bee Colony Registration'
+                               cSval - 0x516d4e4e7852543459764c67737642484e6839364c6172595242635a665779346f55565266644b63587a61764b70
+                               If you put (0x516d4e4e7852543459764c67737642484e6839364c6172595242635a665779346f55565266644b63587a61764b70) into https://onlineasciitools.com/convert-bytes-to-ascii you will see 'QmNNxRT4YvLgsvBHNh96LarYRBcZfWy4oUVRfdKcXzavKp'
+                                  If you go to https://pirl.live/ipfs/QmNNxRT4YvLgsvBHNh96LarYRBcZfWy4oUVRfdKcXzavKp
+                                   you will see the honey bee colony registration
+                               
+                               	
